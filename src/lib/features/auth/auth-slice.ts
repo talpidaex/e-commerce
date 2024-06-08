@@ -1,4 +1,4 @@
-import { createSlice } from "@/lib/createSlice";
+import { createSlice } from "@/lib/create-slice";
 import { PayloadAction } from "@reduxjs/toolkit";
 
 interface InitialState {
@@ -16,6 +16,10 @@ export const authSlice = createSlice({
       state.login = action.payload;
     }),
   }),
+  selectors: {
+    getLoginStatus: (auth) => auth.login,
+  },
 });
 
 export const { setLoginStatus } = authSlice.actions;
+export const { getLoginStatus } = authSlice.selectors;
