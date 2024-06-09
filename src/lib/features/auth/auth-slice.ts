@@ -11,13 +11,13 @@ const initialState: InitialState = {
 export const authSlice = createSlice({
   name: "auth",
   initialState,
-  reducers: (create) => ({
+  reducers: create => ({
     setLoginStatus: create.reducer((state, action: PayloadAction<boolean>) => {
       state.login = action.payload;
     }),
   }),
   selectors: {
-    getLoginStatus: (auth) => auth.login,
+    getLoginStatus: auth => auth.login,
   },
 });
 
