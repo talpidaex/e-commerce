@@ -5,6 +5,7 @@ import type { MenuProps } from "antd"
 import Link from "next/link"
 import Logo from "./logo/logo"
 import Searchbar from "./searchbar/searchbar"
+import SocialIconGroup from "./social-icon-group/social-icon-group"
 
 type MenuItem = Required<MenuProps>['items']
 
@@ -33,7 +34,8 @@ const Navbar = () => {
             <Container>
                 <Logo brand={"E-Commerce"} />
                 <Searchbar />
-                <Menu style={{ borderBottom: "none" }} items={menuItems} mode="horizontal" />
+                <Menu style={{ borderBottom: "none", width: "420px" }} items={menuItems} mode="horizontal" />
+                <SocialIconGroup />
             </Container>
         </>
     )
