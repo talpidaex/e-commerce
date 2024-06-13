@@ -31,12 +31,16 @@ const menuItems: MenuItem = [
 const Navbar = () => {
     return (
         <>
-            <Container>
-                <Logo brand={"E-Commerce"} />
-                <Searchbar />
-                <Menu style={{ borderBottom: "none", width: "420px" }} items={menuItems} mode="horizontal" />
-                <SocialIconGroup />
-            </Container>
+            <div className="sm:block lg:flex w-full justify-center p-8">
+                <div className="flex justify-between w-full">
+                    <Logo brand={"E-Commerce"} />
+                    <Searchbar />
+                </div>
+                <div className="flex md:justify-between lg:justify-center w-full items-center">
+                    <Menu style={{ borderBottom: "none", width: "420px" }} items={menuItems} mode="horizontal" />
+                    <SocialIconGroup />
+                </div>
+            </div>
         </>
     )
 }
